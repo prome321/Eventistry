@@ -1,0 +1,120 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure body and html take full height */
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: var(--light-blue);
+}
+
+/* Define custom color variables */
+:root {
+    --primary-color: #D2E5E5;
+    --secondary-color: #F4A492;
+    --text-color: #555555;
+    --accent-color: #9ACCC9;
+    --white-color: #FFFFFF;
+    --light-teal: #D2E5E5;
+    --dark-gray: #333333;
+    --transparent: #FFFFFF00;
+    --light-blue: #EDF7F8;
+    --pale-teal: #F0F7F7;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    background: var(--primary-color); /* Light teal */
+    color: var(--dark-gray);
+    height: 100vh; /* Ensures sidebar covers full height */
+    padding-top: 20px;
+    position: fixed; /* Keeps sidebar fixed */
+    left: 0;
+    top: 0;
+    overflow-y: auto; /* Allows scrolling if needed */
+    transition: left 0.3s ease-in-out; /* Smooth transition for toggle */
+}
+
+/* Sidebar menu items */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    background-color: var(--accent-color); /* Soft blue-green */
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background: var(--secondary-color); /* Soft red-orange */
+    color: var(--dark-gray);
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    margin-left: 250px; /* Adjust according to sidebar width */
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto; /* Ensures content scrolls properly */
+    background-color: var(--light-blue);
+    transition: margin-left 0.3s ease-in-out; /* Smooth transition for content when sidebar toggles */
+}
+
+/* Mobile view: Sidebar hidden by default, and toggle button appears */
+@media (max-width: 768px) {
+    .sidebar {
+        left: -250px; /* Sidebar hidden */
+    }
+
+    .sidebar.active {
+        left: 0; /* Sidebar visible */
+    }
+
+    .content {
+        margin-left: 0; /* No margin for content on mobile */
+    }
+
+    .toggle-btn {
+        display: block; /* Show toggle button */
+        background: var(--secondary-color);
+        color: var(--white-color);
+        border: none;
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        width: 50px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+}
+
+
+
+/* For the active sidebar toggle */
+.sidebar.active {
+    left: 0; /* Make sidebar visible */
+}
+
+/* When sidebar is active, content adjusts margin */
+.content.active {
+    margin-left: 250px;
+}

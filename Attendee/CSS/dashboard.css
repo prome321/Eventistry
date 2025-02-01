@@ -1,0 +1,224 @@
+
+
+     body {
+            margin: 0;
+           font-family: "Poppins", serif;
+            background:url(Images/back_sec1.jpg);
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            background: linear-gradient(to right, #eaf7f8, #ffffff);
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px!important;
+            align-items: center;
+           
+        }
+        
+
+        .image-container {
+            flex: 1;
+            border-radius: 30px;
+            overflow: hidden;
+           
+            border-radius: 100px 0px 50px 0px;
+        }
+
+        .image-container img {
+
+            
+            border-style: solid;
+            border-width: 5px 5px 5px 5px;
+            border-color: white;
+            border-radius: 100px 0px 50px 0px;
+}
+        }
+
+        .content {
+            margin-top: 50px;
+            flex: 1;
+            text-align: left;
+            margin-right: 150px;
+        }
+
+        .content h1 {
+            font-size: 70px;
+            margin: 0 0 20px;
+            color: #333;
+            font-family: fantasy;
+            
+        }
+
+        .content p {
+
+            font-size: 1rem;
+            color: #666;
+            
+            line-height: 1.6rem;
+
+        }
+         .content span {
+            color: #F4A492;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+           line-height: 1.6rem;
+
+        }
+
+        .content .icon {
+            font-size: 3rem;
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+
+        .content button {
+            margin-top: 30px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .content button:hover {
+            background-color: #e05a50;
+        }
+
+        .content button .icon {
+            font-size: 1.2rem;
+        }
+        .section-images{
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .section-images img{
+                border: 3px solid white;
+        }
+        .section-images .image-1{
+             border-radius: 100px 0px 50px 0px;
+
+        }
+        .section-images .image-2{
+             border-radius: 50px 0px 50px 0px;
+
+        }
+         .section-images .image-3{
+             border-radius: 0px 0px 50px 10px;
+
+        }
+        .section-dashboard{
+              background: linear-gradient(to right, #eaf7f8, #ffffff);
+
+        }
+        .dashboard-body{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-image: url(https://designingmedia.com/bridely/wp-content/uploads/2024/01/category-lines-img.png);
+            background-position: top left;
+            background-repeat: no-repeat;
+            gap: 60px;
+          
+        }
+
+     .dashboard-product {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center elements horizontally */
+        justify-content: center; /* Center elements vertically */
+        text-align: center; /* Center-align text content */
+        padding: 20px; /* Add some spacing inside */
+        gap: 20px; /* Add spacing between the elements */
+    }
+
+.dashboard-product img {
+    max-width: 100%; /* Ensure the image scales properly */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.dashboard-product h2 {
+      font-family: fantasy;
+      font-size: 70px;
+    color: #333; /* Adjust text color */
+    margin: 10px 0; /* Add some spacing around */
+}
+
+.dashboard-product p {
+    font-size: 1rem;
+    color: #666; /* Adjust text color */
+    line-height: 1.6rem; /* Improve readability */
+    margin: 10px 0; /* Add some spacing around */
+}
+
+.dashboard-product button {
+    background-color: #ff6f61; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove borders */
+    padding: 15px 30px; /* Button padding */
+    border-radius: 30px; /* Rounded corners */
+    font-size: 1rem; /* Font size for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add some shadow */
+}
+
+.dashboard-product button:hover {
+    background-color: #e05a50; /* Slightly darker color on hover */
+}
+
+.card-title{
+    text-align: center;
+    font-family: serif;
+}
+.next-plan{
+    display: flex;
+    justify-content: space-between;
+    gap:100px;
+}
+
+.next-plan-image row{
+    display: flex;
+   
+}
+.next-plan-box {
+    border: 1px solid #daeded;
+    padding: 50px 50px 30px;
+    text-align: center;
+}
+.next-plan-image .box-outer{
+    padding: 0;
+}
+
+
+.input-field{
+     color: #999999;
+    font-size: 14px;
+    font-weight: 300;
+    height: 62px !important;
+    line-height: 18px;
+    padding: 10px 40px;
+    border-radius: 100px;
+    border: 1px solid #daeded;
+    width: 100%;
+    box-shadow: none;
+    text-indent: 0;
+
+}
+   
+      
+
+        

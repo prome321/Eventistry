@@ -1,0 +1,135 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #D2E5E5;
+    --secondary-color: #F4A492;
+    --text-color: #555555;
+    --accent-color: #9ACCC9;
+    --white-color: #FFFFFF;
+    --light-teal: #D2E5E5;
+    --dark-gray: #333333;
+    --transparent: #FFFFFF00;
+    --light-blue: #EDF7F8;
+    --pale-teal: #F0F7F7;
+}
+
+/* Ensure full height */
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--light-blue);
+    display: flex;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 20px 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+}
+
+/* Sidebar Header */
+.sidebar h4 {
+    margin-bottom: 20px;
+    color: var(--dark-gray);
+    text-align: center;
+}
+
+/* Sidebar Hide */
+.sidebar.closed {
+    transform: translateX(-250px);
+}
+
+/* Sidebar Menu Items */
+.sidebar a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 8px 10px;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    margin-bottom: 10px;
+    transition: background 0.3s ease;
+}
+
+/* Active & Hover Effect */
+.sidebar a:hover, .sidebar a.active {
+    background-color: var(--secondary-color);
+    color: var(--dark-gray);
+}
+
+/* Dropdown Section */
+.subsection {
+    display: none;
+    margin-left: 20px;
+}
+
+/* Content Area */
+.main-content {
+    padding: 20px;
+    flex-grow: 1;
+    margin-left: 250px;
+    background-color: var(--light-blue);
+    overflow-y: auto;
+}
+
+/* Sidebar Toggle Button */
+.menu-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-btn:focus {
+    outline: none;
+}
+
+/* Dynamic Content Container */
+.dynamic-content-container {
+    background-color: var(--pale-teal);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Responsive Sidebar */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        position: absolute;
+        height: 100vh;
+        overflow-y: auto;
+        transition: 0.3s;
+    }
+
+    .sidebar.active {
+        width: 250px;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+/* Adjust main container */
+.container {
+    margin-left: 250px; /* Adjust this based on sidebar width */
+}

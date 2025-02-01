@@ -1,0 +1,46 @@
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   
+.event-header {
+    position: relative; /* Make this the parent container */
+    text-align: center; /* Center the text horizontally */
+}
+
+.event-header img {
+    width: 100%; /* Make the image take full width of the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.event-header h1 {
+    position: absolute; /* Position the heading absolutely inside the container */
+    top: 50%; /* Vertically center the text */
+    left: 50%; /* Horizontally center the text */
+    transform: translate(-50%, -50%); /* Adjust the position to truly center it */
+    color: black; /* Ensure the text is readable, adjust as necessary */
+    font-size: 70px; 
+    font-family:fantasy;/* Adjust font size as necessary */
+}
+
+
+   .product-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .product-image img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .product-details {
+            padding-left: 20px;
+        }
+        .old-price {
+            text-decoration: line-through;
+            color: gray;
+        }

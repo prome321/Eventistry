@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --e-global-color-primary: #000000;
+    --e-global-color-secondary: #F4A492;
+    --e-global-color-text: #555555;
+    --e-global-color-accent: #9ACCC9;
+    --e-global-color-4689df0: #FFFFFF;
+    --e-global-color-f391aa5: #D2E5E5;
+    --e-global-color-0544718: #333333;
+    --e-global-color-fe36f68: #FFFFFF00;
+    --e-global-color-f739c87: #EDF7F8;
+    --e-global-color-6e52d08: #F0F7F7;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  /* Updated gradient using provided color palette */
+  background: linear-gradient(to right, var(--e-global-color-f391aa5), var(--e-global-color-accent), var(--e-global-color-4689df0));
+
+  color: var(--e-global-color-text);
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.container .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  text-align: left;
+}
+
+.container .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, var(--e-global-color-accent), var(--e-global-color-primary));
+}
+
+.content form .user-box {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+form .user-box .input-box {
+  margin-bottom: 15px;
+}
+
+form .input-box span.details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+form .user-box .input-box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+form .user-box .input-box input:focus,
+form .user-box .input-box input:valid {
+  border-color: #9b59b6;
+}
+
+form .button {
+  height: 45px;
+  margin: 35px 0;
+}
+
+form .button input {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, var(--e-global-color-accent), var(--e-global-color-primary));
+}
+
+form .button input:hover {
+  background: linear-gradient(-135deg, var(--e-global-color-accent), var(--e-global-color-primary));
+}
+
+/* Responsive media query code for mobile devices */
+@media(max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+}
